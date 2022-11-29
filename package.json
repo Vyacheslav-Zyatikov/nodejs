@@ -5,7 +5,7 @@
   "main": "Leson_1.js",
   "scripts": {
     "leson_1": "node Leson_1.js 1 100",
-    "leson_2": "node Leson_2.js 23:59 31-12-2022"
+    "leson_2": "node Leson_2.js 24-31-12-2022"
   },
   "type": "module",
   "keywords": [],
