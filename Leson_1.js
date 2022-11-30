@@ -1,13 +1,13 @@
 'use strict';
 import colors from 'colors'
 
-const [arg1, arg2] = process.argv.slice(2);
+let [arg1, arg2] = process.argv.slice(2);
+arg1 = +arg1;
+arg2 = +arg2;
 let currentIndex = 0;
 let countSimpleNumbers = 0;
 
-function simpleNumbers(arg1Range, arg2Range) {
-    let arg1 = +arg1Range;
-    let arg2 = +arg2Range;
+function simpleNumbers(arg1, arg2) {
     if (checkErrors()) return false;
     createSimpleNumbers(arg1, arg2);
 }
