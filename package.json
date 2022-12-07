@@ -2,17 +2,19 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "Leson_1.js",
+  "main": "Lesson_1.js",
   "scripts": {
-    "leson_1": "node Leson_1.js 1 100",
-    "leson_2": "node Leson_2.js 24-31-12-2022",
-    "leson_3": "node Leson_3.js"
+    "leson_1": "node Lesson_1.js 1 100",
+    "leson_2": "node Lesson_2.js 24-31-12-2022",
+    "leson_3": "node Lesson_3.js"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "inquirer": "^9.1.4",
+    "yargs": "^17.6.2"
   }
 }
