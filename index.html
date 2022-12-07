@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work #6</title>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+</head>
+  <body>
+  <label for="input"></label><input type="text" id="input" autofocus>
+    <input type="submit" id="send" value="Send">
+    <div id="messages"></div>
+  </body>
+  <script type="text/javascript">
+    const socket = io('localhost:3000');
+  
+    const addMessage = (msg, userName) => {
+      const msgSpan = document.createElement('span').innerHTML = msg;
+      const nameSpan = document.createElement('span').innerHTML = userName;
+      document.getElementById('messages').append(nameSpan);
+      document.getElementById('messages').append(msgSpan);
+      document.getElementById('messages').append(document.createElement('br'));
+    };
+  
+    socket.on('connect', function() {
+      console.log('Successful connected to server');
+    });
+  
+    socket.on('SERVER_MSG', function (data) {
+      addMessage(data.msg, data.userName);
+    });
+
+    socket.on('NEW_CONN_EVENT', function (data) {
+      addMessage(data.msg, data.userName);
+    });
+  
+    document.getElementById('send').onclick = function() {
+      socket.emit('CLIENT_MSG', { msg: document.getElementById('input').value });
+      document.getElementById('input').value = '';
+    };
+  </script>
+</html>

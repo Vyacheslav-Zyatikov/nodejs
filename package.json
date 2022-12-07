@@ -8,7 +8,8 @@
     "leson_2": "node Lesson_2.js 24-31-12-2022",
     "leson_3": "node Lesson_3.js",
     "leson_4": "node Lesson_4.js -s 89.123.1.41",
-    "leson_5": "node Lesson_5.js"
+    "leson_5": "node Lesson_5.js",
+    "leson_6": "node Lesson_6.js"
   },
   "type": "module",
   "keywords": [],
@@ -17,6 +18,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "inquirer": "^9.1.4",
+    "socket.io": "^4.5.4",
     "yargs": "^17.6.2"
   }
 }
