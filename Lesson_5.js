@@ -65,4 +65,4 @@ http.createServer(async (request, response) => {
         }
         response.end()
     }
-}).listen(3000, 'localhost');
+}).listen(3000, 'localhost', () => console.log(`Server running at http://localhost:3000`));
