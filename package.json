@@ -6,7 +6,9 @@
   "scripts": {
     "leson_1": "node Lesson_1.js 1 100",
     "leson_2": "node Lesson_2.js 24-31-12-2022",
-    "leson_3": "node Lesson_3.js"
+    "leson_3": "node Lesson_3.js",
+    "leson_4": "node Lesson_4.js -s 89.123.1.41",
+    "leson_5": "node Lesson_5.js"
   },
   "type": "module",
   "keywords": [],
